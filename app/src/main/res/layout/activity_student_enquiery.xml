@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.prasasd.nikhil.enqbot.StudentEnquieryActivity">
+
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/robot"
+        android:layout_width="300dp"
+        android:layout_height="225dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/a_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        app:srcCompat="@drawable/mic"
+        android:onClick="buttonClicked"/>
+
+    <EditText
+        android:id="@+id/m_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/a_question"
+        android:background="@drawable/tbox"
+        android:ems="10"
+        android:hint="Your Question"
+        android:inputType="textPersonName"
+        android:padding="15dp" />
+
+    <Button
+        android:id="@+id/sendQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/m_question"
+        android:layout_toEndOf="@+id/m_question"
+        android:background="@android:drawable/ic_menu_send"
+        android:onClick="textquestion"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/question_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/a_question"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/background_gradient"
+        android:padding="25dp"
+        android:text="sssssssssssssssssssssssssssssssss"
+        android:textColor="?android:attr/colorBackground"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/answer_df"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/robot"
+        android:layout_centerHorizontal="true"
+        android:text="Your next class is"
+        android:textColor="@android:color/holo_purple"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/answer_db"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer_df"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/chatBox"
+        android:text="DBMS in c13"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+</RelativeLayout>
